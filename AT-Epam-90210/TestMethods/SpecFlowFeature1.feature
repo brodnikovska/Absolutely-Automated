@@ -33,9 +33,7 @@ Scenario: Fill the form with empty Name field and try to submit
 
 	Examples:
 		| length |
-		| 140    |
-		
-	
+		| 140    |			
 
 
 Scenario: Fill the form with empty Email field and try to submit

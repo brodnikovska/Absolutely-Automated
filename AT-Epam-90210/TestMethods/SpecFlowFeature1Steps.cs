@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium.Chrome;
 using TechTalk.SpecFlow;
 using Test;
+using System;
 
 namespace TestMethods
 {
@@ -40,9 +41,9 @@ namespace TestMethods
         }
         
         [Given(@"I get the sample of Lorem Ipsum text of the length (.*) bytes")]
-        public void GivenIGetTheSampleOfLoremIpsumTextOfTheLengthBytes(string p0)
+        public void GivenIGetTheSampleOfLoremIpsumTextOfTheLengthBytes(Table table)
         {
-            this.sample = loremIpsumPage.GetLoremIpsumString(p0);
+            this.sample = loremIpsumPage.GetLoremIpsumString(table.Rows[0]["length"].ToString());
         }
         
         [Given(@"I go to https://www\.bbc\.com page")]
