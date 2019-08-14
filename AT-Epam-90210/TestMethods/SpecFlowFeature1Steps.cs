@@ -41,9 +41,9 @@ namespace TestMethods
         }
         
         [Given(@"I get the sample of Lorem Ipsum text of the length (.*) bytes")]
-        public void GivenIGetTheSampleOfLoremIpsumTextOfTheLengthBytes(Table table)
+        public void GivenIGetTheSampleOfLoremIpsumTextOfTheLengthBytes(string length)
         {
-            this.sample = loremIpsumPage.GetLoremIpsumString(table.Rows[0]["length"].ToString());
+            this.sample = loremIpsumPage.GetLoremIpsumString(length);
         }
         
         [Given(@"I go to https://www\.bbc\.com page")]
